@@ -1,3 +1,17 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Tarot';
+  /* http://www.fontineed.com/font/Magicmedieval */
+  src: url('/fonts/MagicMedieval.ttf');
+}
+
+@font-face {
+  font-family: 'Beanie';
+  /* http://www.fontineed.com/font/beanie_plain */
+  src: url('/fonts/beanie_plain.ttf');
+}
+
 /* Layout (mobile by default) */
 
 .app {
