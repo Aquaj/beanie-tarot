@@ -25,13 +25,17 @@ function getJSON(url, qs_params) {
 }
 
 const randomize = async() => {
-  const currentCard = $("#card").getAttribute('data-selected');
+  const currentCard = $(".picker").getAttribute('data-selected');
   const eligibleCards = (await cards).filter(card => card.name !== currentCard)
   const { name: cardName, description, imageUrl: newUrl } = pickRandomFrom(eligibleCards);
-  $("#card #picture").setAttribute("src", newUrl);
-  $("#card #picture").setAttribute("alt", cardName);
-  $("#card #description").innerHTML = description;
-  $("#card").setAttribute('data-selected', cardName);
+
+  $(".picker .card__picture").setAttribute("src", newUrl);
+  $(".picker .card__picture").setAttribute("alt", cardName);
+  $(".picker .card__name").innerHTML = cardName;
+  $(".picker .description__title").innerHTML = cardName;
+  $(".picker .description__body").innerHTML = description;
+
+  $(".picker").setAttribute('data-selected', cardName);
 }
 
 function pickRandomFrom(collection) {

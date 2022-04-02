@@ -1,0 +1,140 @@
+/* Layout (mobile by default) */
+
+.app {
+  max-height: unset;
+  width: 100%;
+
+  display: grid;
+  grid: "title" min-content
+        "picker" auto
+        "footer" min-content;
+}
+
+.picker {
+  display: grid;
+  grid: "card"
+        "random"
+        "description";
+  grid-gap: 1em;
+  padding: 0 20vw;
+}
+
+.title {
+  grid-area: title;
+  height: 1em;
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Picker */
+
+.picker__randomizer {
+  margin: auto;
+  grid-area: random;
+}
+
+/* Description */
+
+.picker__description {
+  grid-area: description;
+  margin: auto;
+
+  width: calc(7*3*1em);
+  min-height: calc(12*3*1em);
+
+  border: 1px solid black;
+
+  display: grid;
+  grid: "title" min-content
+        "body";
+  padding: 0 2em;
+}
+
+.description__title {
+  grid-area: title;
+
+  min-height: 2em;
+  width: 75%;
+  margin: 1em auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.description__body {
+  margin: 1em;
+}
+
+/* Card */
+
+.picker__card {
+  margin: auto;
+  grid-area: card;
+
+  border: 1px solid black;
+  width: calc(7*3*1em);
+  height: calc(12*3*1em);
+
+  display: grid;
+  grid: 'pic' auto
+        'name' min-content;
+}
+
+.card__picture {
+  grid-area: pic;
+
+  margin: auto 1em;
+  width: calc(100% - 2em);
+  max-height: 100%;
+}
+
+.card__name {
+  background-color: #f8f8f8;
+  grid-area: name;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid black;
+  height: 4em;
+  padding: 0 1em;
+}
+
+/* Desktop layout */
+@media only screen and (min-width: 900px) {
+  .app {
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .picker {
+    max-height: 100%;
+    display: grid;
+    grid: "card   description"
+          "random .";
+    padding: 0 5vw;
+  }
+
+  .picker__description {
+    width: calc(7*5*1em);
+    height: calc(12*3*1em);
+    overflow-y: auto;
+  }
+}
