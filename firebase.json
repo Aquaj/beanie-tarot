@@ -10,13 +10,13 @@
       "source": "**/*.@(js|css)",
       "headers": [{
         "key": "Cache-Control",
-        "value": "max-age=0"
+        "value": "no-store"
       }]
     },{
       "source": "**/assets/*",
       "headers": [{
         "key": "Cache-Control",
-        "value": "max-age=0"
+        "value": "no-store"
       }]
     }]
   }
