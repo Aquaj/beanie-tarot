@@ -1,0 +1,17 @@
+[{
+  "name": "A",
+  "description": "Hello",
+  "imageUrl": "/assets/images/dugtrio.png"
+},{
+  "name": "B",
+  "description": "Bonjour",
+  "imageUrl": "https://via.placeholder.com/300.png/09f/fff?text=2nd card"
+},{
+  "name": "C",
+  "description": "Hola",
+  "imageUrl": "/assets/images/index.png"
+},{
+  "name": "D",
+  "description": "Shalom",
+  "imageUrl": "https://via.placeholder.com/300.png/09f/fff?text=4th card"
+}]
