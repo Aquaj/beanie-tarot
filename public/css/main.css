@@ -71,7 +71,8 @@
 
   display: grid;
   grid: "title" min-content
-        "body";
+        "poem" min-content
+        "interpretation";
   padding: 0 2em;
 }
 
@@ -91,8 +92,22 @@
   font-weight: bold;
 }
 
-.description__body {
+.description__poem {
+  grid-area: poem;
+
+  min-height: 2em;
+  width: 75%;
+  margin: 1em auto;
+
+  display: flex;
+  align-items: center;
+
+  font-style: italic;
+}
+
+.description__interpretation {
   margin: 1em;
+  grid-area: interpretation;
 }
 
 /* Card */
