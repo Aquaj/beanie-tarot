@@ -13,7 +13,7 @@
         "value": "no-store"
       }]
     },{
-      "source": "**/assets/*",
+      "source": "**/assets/**/*",
       "headers": [{
         "key": "Cache-Control",
         "value": "no-store"
